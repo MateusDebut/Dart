@@ -4,7 +4,7 @@ class Lista<T>{
   late Node<T> _inicio;
   int _tamanho = 0;
 
-  void adicionar(T item){
+  adicionar(T item){
     Node<T> node = Node(item);
     if(_tamanho == 0) {
       node.anterior = null;
@@ -22,7 +22,7 @@ class Lista<T>{
     _tamanho++;
   }
 
-  void excluir(int indice){
+  excluir(int indice){
     if(indice >= _tamanho){
       return;
     }
@@ -42,7 +42,7 @@ class Lista<T>{
     aux = null;
   }
 
-  void imprimeLista(){
+  imprimeLista(){
     Node<T>? aux = _inicio;
     while(aux != null){
       print(aux.item);
