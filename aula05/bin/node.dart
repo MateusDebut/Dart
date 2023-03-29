@@ -3,9 +3,7 @@ class Node<T>{
   Node<T>? _anterior;
   Node<T>? _proximo;
 
-  Node(T item){
-    _item = item;
-  }
+  Node(this._item);
 
   Node<T>? get proximo => _proximo;
 
