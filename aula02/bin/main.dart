@@ -12,7 +12,7 @@ void main(List<String> arguments) {
   String? input = stdin.readLineSync();
   if(input != null){
     int idade = int.parse(input);
-    print(idade);
+    print("Minha idade é: $idade");
   }
 
 }
