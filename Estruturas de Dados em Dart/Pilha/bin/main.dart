@@ -1,18 +1,25 @@
+import 'dart:io';
+
+import 'jogador.dart';
 import 'pilha.dart';
 
+
+class JogadorPremium extends Jogador{
+  void acessarRecursosPremium(){
+    print("Acessando recursos premium");
+  }
+}
+
 void main(){
-  Pilha<String> nomes = Pilha();
-  nomes.adicionar("Monica");
-  nomes.adicionar("Miguel");
-  nomes.adicionar("Mateus");
-  nomes.adicionar("Rose");
+  JogadorPremium jogador1 = JogadorPremium();
+  Jogador jogador2 = Jogador();
 
-  print(nomes);
+  jogador1.nome = "Davi";
+  jogador1.id = 1;
 
-  nomes.remover();
-  nomes.remover();
+  jogador2.nome = "Mateus";
+  jogador2.id = 2;
 
-  print("---------------------");
-  print(nomes);
-
+  jogador1.convidarOutroPlayer(jogador1);
+  jogador1.acessarRecursosPremium();
 }
